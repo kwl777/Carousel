@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+
 import Slider, { SliderItem, SliderInfo } from "./Slider";
 
 import './index.css';
@@ -17,21 +17,21 @@ export default function App(props){
     ...others
   };
   return (
-        <Slider {...settings}>
-          {info.map((item) => {
-            return (
-              <SliderItem
-                key={item.id}
-                styles={{ backgroundColor: item.backgroundColor }}
-              >
-                <SliderInfo
-                  title={item.title}
-                  describe={item.describe}
-                  image={item.image}
-                />
-              </SliderItem>
-            );
-          })}
-        </Slider>
+    <Slider {...settings}>
+      {info.map((item) => {
+        return (
+          <SliderItem
+            key={item.id}
+            styles={{ backgroundColor: item.backgroundColor }}
+          >
+            <SliderInfo
+              title={item.title}
+              describe={item.describe}
+              image={item.image}
+            />
+          </SliderItem>
+        );
+      })}
+    </Slider>
   );
 };
